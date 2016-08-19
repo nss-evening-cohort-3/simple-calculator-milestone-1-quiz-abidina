@@ -10,6 +10,25 @@ namespace SimpleCalculator
     {
         static void Main(string[] args)
         {
+            string intialPrompt = "[x]>"; // x is my counter
+            int counter = 0;
+            bool continued = true;
+
+            List<string> Escape = new List<string>() { "quit", "exit", "escape" }; // req exit commands
+
+            while (continued == true)
+            {
+                Console.Write("[" + counter++ + "]>");
+
+                string user_expression = Convert.ToString(Console.ReadLine().ToLower());
+                // need to separate operands & operators
+
+            if (Escape.Contains(user_expression))
+                {
+                    continued = false;
+                    Environment.Exit(0); //"use 0 to indicate success" or something
+                }
+            }
         }
     }
 }
