@@ -13,7 +13,10 @@ namespace SimpleCalculator
             string intialPrompt = "[x]>"; // x is my counter
             int counter = 0;
             bool continued = true;
+            char[] possibleOperators = { '/', '*', '-', '+', '%' };
+            int[] possibleDigits = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
 
+            
             List<string> Escape = new List<string>() { "quit", "exit", "escape" }; // req exit commands
 
             while (continued == true)

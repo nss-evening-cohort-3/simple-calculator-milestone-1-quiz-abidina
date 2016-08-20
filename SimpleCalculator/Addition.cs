@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleCalculator
 {
-    class Class1
+    class Addition
     {
     }
 }
