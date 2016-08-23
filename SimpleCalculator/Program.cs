@@ -31,28 +31,33 @@ namespace SimpleCalculator
                 userOperands.Add(expression.getOperandR(user_expression));
 
                 // ------------ testing stuff --------------- //
-                Console.WriteLine(expression.getOperandL(user_expression));
+                /* Console.WriteLine(expression.getOperandL(user_expression));
                 Console.WriteLine(expression.getOperandR(user_expression));
                 Console.WriteLine(userOperands.Count);
                 foreach (string n in userOperands)
                 {
                     Console.Write(n);
-                }    // all of the tests were working, i should be accessing the correct info, but it ... doesn't?
-                Console.WriteLine(expression.getOperator(user_expression));
+                }    
+                Console.WriteLine(expression.getOperator(user_expression)); */
 
-
-                // exit program 
-                if (user_expression.Contains(expression.getOperator(user_expression)))
+                if (user_expression.Contains(possibleOperators.ToString()))
                 {
                     Console.Write(expression.getOperator(user_expression));
                 }
-                else if (Escape.Contains(user_expression))
+                else
+                {
+                    Console.WriteLine("Please enter an operator (ex. +, -, /, *, %)");
+                } // Why does this break? 
+
+
+                // exit program 
+                if (Escape.Contains(user_expression))
                 {
                     continued = false;
                     Environment.Exit(0); //use 0 to indicate success
                 } else if (userOperands.Count > 2 || userOperands.Count < 2) {
-                    Console.Write("Please enter two numbers."); // why does it know the userOperands count outside of the if else?
-                } else if (userOperands.Count == 2) { Console.Write(":)"); } // THIS IS VERY BROKEN. It quits when any letters are typed and passes as valid whenever numbers are typed
+                    Console.Write("Please enter two numbers."); 
+                } else if (userOperands.Count == 2) { Console.Write(":)"); } 
 
                 // make sure user input is 2 operands & an operator, return error if not
 
