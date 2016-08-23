@@ -28,27 +28,26 @@ namespace SimpleCalculator
 
         public string getOperator(string user_expression)
         {
-            //nothing yet
-            expressionOperator = user_expression[getOperatorIndex(user_expression)].ToString(); //ToString converts any value to a string
+            string expressionOperator = user_expression[getOperatorIndex(user_expression)].ToString(); //ToString converts any value to a string
             return expressionOperator;
         }
 
         public int getOperandLIndex(string user_expression)
         {
-            int indexOfOperandL = user_expression.IndexOfAny(possibleDigits); //unfortunately this cannot be, as it will never find OperandR when the time comes
+            int indexOfOperandL = user_expression.IndexOfAny(possibleDigits); 
             return indexOfOperandL;
         }
 
         public int getOperandRIndex(string user_expression)
         {
             int indexOfOperandR = user_expression.LastIndexOfAny(possibleDigits);
-            return indexOfOperandR;
+            return indexOfOperandR; // still runs even if there's only one digit, so there are always 2 in my userOperands list
         }
 
         public string getOperandL(string user_expression)
         {
             expressionOperandL = user_expression[getOperandLIndex(user_expression)].ToString();
-            return expressionOperandL;
+            return expressionOperandL; 
         }
 
         public string getOperandR(string user_expression)

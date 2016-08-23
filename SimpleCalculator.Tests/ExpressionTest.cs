@@ -13,17 +13,17 @@ namespace SimpleCalculator.Tests
             //Arrange
 
             //Act
-            Expression user_expression = new Expression();
+            Expression expression = new Expression();
             //Assert
-            Assert.IsNotNull(user_expression);
+            Assert.IsNotNull(expression);
 
         }
 
         [TestMethod]
         public void ExtractOperator()
         {         
-            Expression user_expression = new Expression();
-            string expressionOperator = user_expression.getOperator("1 + 2");
+            Expression expression = new Expression();
+            string expressionOperator = expression.getOperator("1 + 2");
 
             Assert.AreEqual("+", expressionOperator);
         }
@@ -31,8 +31,8 @@ namespace SimpleCalculator.Tests
         [TestMethod]
         public void ExtractOperandL()
         {
-            Expression user_expression = new Expression();
-            string expressionOperandL = user_expression.getOperandL("1 + 2");
+            Expression expression = new Expression();
+            string expressionOperandL = expression.getOperandL("1 + 2");
 
             Assert.AreEqual("1", expressionOperandL);
         }
@@ -40,8 +40,8 @@ namespace SimpleCalculator.Tests
         [TestMethod]
         public void ExtractOperandR()
         {
-            Expression user_expression = new Expression();
-            string expressionOperandR = user_expression.getOperandR("1 + 2");
+            Expression expression = new Expression();
+            string expressionOperandR = expression.getOperandR("1 + 2");
 
             Assert.AreEqual("2", expressionOperandR);
         }
