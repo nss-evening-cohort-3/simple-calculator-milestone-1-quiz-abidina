@@ -43,10 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Addition.cs" />
-    <Compile Include="Subtraction.cs" />
-    <Compile Include="Multiplication.cs" />
-    <Compile Include="Division.cs" />
+    <Compile Include="Stack.cs" />
+    <Compile Include="Evaluator.cs" />
     <Compile Include="Expression.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

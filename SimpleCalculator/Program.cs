@@ -24,9 +24,9 @@ namespace SimpleCalculator
 
                 Expression expression = new Expression(); // so you can access methods in expression
 
-                string user_expression = Convert.ToString(Console.ReadLine().ToLower());
+                string user_expression = Console.ReadLine().ToLower();
 
-                List<string> userOperands = new List<string>();
+                List<int> userOperands = new List<int>();
                 userOperands.Add(expression.getOperandL(user_expression));
                 userOperands.Add(expression.getOperandR(user_expression));
 
@@ -47,7 +47,7 @@ namespace SimpleCalculator
                 else
                 {
                     Console.WriteLine("Please enter an operator (ex. +, -, /, *, %)");
-                } // Why does this break? 
+                } 
 
 
                 // exit program 

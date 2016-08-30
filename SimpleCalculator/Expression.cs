@@ -44,15 +44,15 @@ namespace SimpleCalculator
             return indexOfOperandR; // still runs even if there's only one digit, so there are always 2 in my userOperands list
         }
 
-        public string getOperandL(string user_expression)
+        public int getOperandL(string user_expression)
         {
-            expressionOperandL = user_expression[getOperandLIndex(user_expression)].ToString();
+            int expressionOperandL = user_expression[getOperandLIndex(user_expression)];
             return expressionOperandL; 
         }
 
-        public string getOperandR(string user_expression)
+        public int getOperandR(string user_expression)
         {
-            expressionOperandR = user_expression[getOperandRIndex(user_expression)].ToString();
+            int expressionOperandR = user_expression[getOperandRIndex(user_expression)];
             return expressionOperandR;
         }
     }

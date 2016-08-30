@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SimpleCalculator.Tests
 {
     [TestClass]
-    public class DivisionTest
+    public class StackTest
     {
         [TestMethod]
         public void TestMethod1()

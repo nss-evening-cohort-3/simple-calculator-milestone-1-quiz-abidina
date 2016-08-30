@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SimpleCalculator
 {
-    class Subtraction
+    class Evaluator
     {
+        //switch statement
     }
 }

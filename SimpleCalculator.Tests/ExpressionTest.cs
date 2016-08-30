@@ -23,7 +23,7 @@ namespace SimpleCalculator.Tests
         public void ExtractOperator()
         {         
             Expression expression = new Expression();
-            string expressionOperator = expression.getOperator("1 + 2");
+            char expressionOperator = expression.getOperator(1 + 2);
 
             Assert.AreEqual("+", expressionOperator);
         }
@@ -32,18 +32,18 @@ namespace SimpleCalculator.Tests
         public void ExtractOperandL()
         {
             Expression expression = new Expression();
-            string expressionOperandL = expression.getOperandL("1 + 2");
+            int expressionOperandL = expression.getOperandL(1 + 2);
 
-            Assert.AreEqual("1", expressionOperandL);
+            Assert.AreEqual(1, expressionOperandL);
         }
 
         [TestMethod]
         public void ExtractOperandR()
         {
             Expression expression = new Expression();
-            string expressionOperandR = expression.getOperandR("1 + 2");
+            int expressionOperandR = expression.getOperandR(1 + 2);
 
-            Assert.AreEqual("2", expressionOperandR);
+            Assert.AreEqual(2, expressionOperandR);
         }
     }
 }
