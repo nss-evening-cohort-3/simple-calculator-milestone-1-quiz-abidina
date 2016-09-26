@@ -16,15 +16,16 @@ namespace SimpleCalculator
             char[] possibleOperators = { '/', '*', '-', '+', '%' };
             int[] possibleDigits = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
 
+            Expression expression = new Expression(); // so you can access methods in expression
+
             List<string> Escape = new List<string>() { "quit", "exit", "escape" }; // req exit commands
 
             while (continued == true)
             {
                 Console.Write("[" + counter++ + "]>");
 
-                Expression expression = new Expression(); // so you can access methods in expression
-
                 string user_expression = Console.ReadLine().ToLower();
+
 
                 List<int> userOperands = new List<int>();
                 userOperands.Add(expression.getOperandL(user_expression));
@@ -39,8 +40,7 @@ namespace SimpleCalculator
                     Console.Write(n);
                 }    
                 Console.WriteLine(expression.getOperator(user_expression)); */
-
-                if (user_expression.Contains(possibleOperators.ToString()))
+                if (possibleOperators.Any(currentOperator => user_expression.Contains(currentOperator)))
                 {
                     Console.Write(expression.getOperator(user_expression));
                 }

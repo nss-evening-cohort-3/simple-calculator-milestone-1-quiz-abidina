@@ -46,13 +46,13 @@ namespace SimpleCalculator
 
         public int getOperandL(string user_expression)
         {
-            int expressionOperandL = user_expression[getOperandLIndex(user_expression)];
+            int expressionOperandL = int.Parse(user_expression[getOperandLIndex(user_expression)].ToString());
             return expressionOperandL; 
         }
 
         public int getOperandR(string user_expression)
         {
-            int expressionOperandR = user_expression[getOperandRIndex(user_expression)];
+            int expressionOperandR = int.Parse(user_expression[getOperandRIndex(user_expression)].ToString());
             return expressionOperandR;
         }
     }
