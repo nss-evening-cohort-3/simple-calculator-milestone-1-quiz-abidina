@@ -47,7 +47,16 @@ namespace SimpleCalculator
                 else
                 {
                     Console.WriteLine("Please enter an operator (ex. +, -, /, *, %)");
-                } 
+                }
+
+                if (possibleDigits.Any(currentDigitL => user_expression.Contains((currentDigitL).ToString())))
+                {
+                    Console.WriteLine(expression.getOperandL(user_expression));
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a digit 0-9.");
+                }
 
 
                 // exit program 
