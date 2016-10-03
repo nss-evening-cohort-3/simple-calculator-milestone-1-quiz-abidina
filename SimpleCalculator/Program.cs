@@ -53,6 +53,19 @@ namespace SimpleCalculator
                 {
                     Console.WriteLine(expression.getOperandL(user_expression));
                 }
+                //else if (currentDigitL = null || )
+                //{
+                //    Console.WriteLine("Please enter a digit 0-9.");
+                //}  THIS NEED TO MAKE SURE THAT EACH OPERAND IS NOT NULL 
+                else
+                {
+                    Console.WriteLine("Please enter a digit 0-9.");
+                }
+
+                if (possibleDigits.Any(currentDigitR => user_expression.Contains((currentDigitR).ToString())))
+                {
+                    Console.WriteLine(expression.getOperandR(user_expression));
+                }
                 else
                 {
                     Console.WriteLine("Please enter a digit 0-9.");
